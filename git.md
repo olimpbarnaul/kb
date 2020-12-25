@@ -38,6 +38,14 @@ git stash pop # применить последнее изменение из с
 
 git stash clear # очистить стек изменений
 
+
+### Update all submodules
+``
+git submodule init
+git submodule update
+git submodule foreach 'git fetch origin; git checkout $(git rev-parse --abbrev-ref HEAD); git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); git submodule update --recursive; git clean -dfx'
+``
+
 ### Remove submodule
 
 - Delete the relevant section from the .gitmodules file.
