@@ -11,6 +11,6 @@ sshfs me@x.x.x.x:/remote/path /local/path/ -o IdentityFile=/path/to/key
 
 
 ### New features
-tldr
+locate
 
 showkey -a
