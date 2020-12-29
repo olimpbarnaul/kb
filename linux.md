@@ -13,7 +13,7 @@ sshfs me@x.x.x.x:/remote/path /local/path/ -o IdentityFile=/path/to/key
 ### Package info
 
 #### Arch
-pacman -Qi package_name
+pacman -Si package_name
 
 #### Ubuntu, Debian
 apt show package_name
