@@ -1,5 +1,8 @@
 # Linux...
 
+### Printer queue clear
+lprm -
+
 ### Disable ACPI Wake-Up after suspend settings 
 #### List of wakeup devices
 cat /proc/acpi/wakeup
