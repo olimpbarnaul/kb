@@ -171,3 +171,6 @@ ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
 #### Place the following in your shell initialization file .bashrc or .zshrc
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
+### Printer setup (HP)
+pacman -Sy cups hplip
+http://localhost:631/ - to add printer
