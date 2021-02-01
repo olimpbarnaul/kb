@@ -173,4 +173,5 @@ ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
 
 ### Printer setup (HP)
 pacman -Sy cups hplip
+
 http://localhost:631/ - to add printer
