@@ -121,7 +121,7 @@ reboot
 
 
 
-pacman -Sy xorg-server xorg-xinit i3-wm dmenu git guake picom pulseaudio pulseaudio-alsa alsa-utils
+pacman -Sy xorg-server xorg-xinit i3-wm dmenu git guake picom pulseaudio
 useradd -m -G wheel,adm -s /bin/bash nn
 passwd nn
 #### uncomment wheel group in /etc/sudoers
