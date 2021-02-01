@@ -121,7 +121,18 @@ reboot
 
 
 
-pacman -Sy xorg-server xorg-xinit i3-wm dmenu git guake picom
+pacman -Sy xorg-server xorg-xinit i3-wm dmenu git guake picom pulseaudio pulseaudio-alsa alsa-utils
 useradd -m -G wheel,adm -s /bin/bash nn
 passwd nn
 #### uncomment wheel group in /etc/sudoers
+
+###Automatic login to virtual console
+####Edit the provided unit either manually by creating the following drop-in snippet, or by running **systemctl edit getty@tty1** and pasting its content
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
+
+### Autostart X at login
+#### Place the following in your shell initialization file .bashrc or .zshrc
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
