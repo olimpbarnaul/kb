@@ -33,10 +33,15 @@ swapon /dev/sda3
 
 ### final mounted table
 sda        8:0    0 223.6G  0 disk  
+
 ├─sda1     8:1    0   512M  0 part  /mnt/boot
+
 ├─sda2     8:2    0    40G  0 part  /mnt
+
 ├─sda3     8:3    0     8G  0 part  [SWAP]
+
 └─sda4     8:4    0 179.6G  0 part  
+
   └─home 254:0    0 179.6G  0 crypt /mnt/home
 
 
