@@ -55,7 +55,7 @@ sda        8:0    0 223.6G  0 disk
   └─home 254:0    0 179.6G  0 crypt /mnt/home
 
 
-pacstrap /mnt base base-devel linux linux-firmware networkmanager terminus-font vim mc ranger
+pacstrap /mnt base base-devel linux linux-firmware networkmanager terminus-font vim mc
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -94,11 +94,11 @@ vim /etc/hosts
 127.0.1.1 nb
 
 vim /etc/fstab
-# home partition
+#### home partition
 /dev/mapper/home	                        /home     	ext4      	defaults	0 2
 
 vim /etc/crypttab
-# home partition
+#### home partition
 home           UUID=fb10f41d-42e0-4b3a-b362-b67b5c49487a    none                    luks,timeout=180
 
 vim /etc/mkinitcpio.conf
@@ -151,13 +151,15 @@ umount -a
 reboot
 
 
-
 pacman -Sy xorg-server xorg-xinit i3-wm dmenu git guake picom pulseaudio
 
 useradd -m -G wheel,adm -s /bin/bash nn
 
 passwd nn
 #### uncomment wheel group in /etc/sudoers
+
+#### ranger with images preview
+pacman -Sy ranger w3m imlib2
 
 ###Automatic login to virtual console
 ####Edit the provided unit either manually by creating the following drop-in snippet, or by running **systemctl edit getty@tty1** and pasting its content
