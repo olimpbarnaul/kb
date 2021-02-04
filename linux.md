@@ -40,3 +40,6 @@ https://explainshell.com/
 
 #### программа для анализа исходного кода проекта, в частности подсчитывает количество строчек кода в проекте
 cloc
+
+### Find HDD badblocks
+badblocks -s -v /dev/sda
