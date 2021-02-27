@@ -1,5 +1,9 @@
 # Files
 
+### Convert DVD (VOB files)
+ffmpeg -i "concat:$(echo *.VOB|tr \  \|)" combined.mp4
+
+
 ### Convert
 
 #### Rotate images
